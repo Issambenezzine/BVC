@@ -1,0 +1,166 @@
+.top-nav {
+    background-color: #070101;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Assurez-vous que la barre de navigation est au-dessus de l'image de fond */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.top-nav img {
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-right: 10px; /* Marge à droite de l'image */
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.top-nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.side-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Initial position à droite */
+    width: 200px;
+    height: 100%;
+    background-color: #548b00;
+    padding-top: 60px; /* La hauteur de la barre de navigation */
+    z-index: 2;
+}
+
+#toggleNavButton {
+    position: fixed;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #fa0000;
+    z-index: 3; /* Assurez-vous que le bouton a un index Z supérieur aux autres éléments */
+}
+
+.side-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -200px; /* Initial position à droite */
+    width: 200px;
+    height: 100%;
+    background-color: #333; /* Couleur de fond */
+    z-index: 2;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    padding: 10px;
+}
+
+.side-nav ul li a {
+    color: #fff; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.side-nav ul li a:hover {
+    background-color: #555; /* Couleur de fond au survol */
+}
+
+.show {
+    display: block !important;
+}
+
+.side-nav {
+    /* Autres styles */
+    transition: right 0.3s ease; /* Ajouter une transition fluide */
+}
+
+.show {
+    right: 0; /* Afficher la barre latérale à droite */
+}
+
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 100;
+    padding: 0;
+}
+
+/* Style pour l'en-tête */
+header {
+
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    position: relative; 
+    /* Assurez-vous que l'en-tête a une position relative */
+}
+
+
+header h1 {
+    font-size: 32px;
+    margin-top: 160px;
+    font-family: "Bebas Neue", sans-serif  /* Augmentez cette valeur pour déplacer le titre plus bas */
+}
+
+/* Style pour les sections */
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/* Style pour les titres de section h2 */
+section h2 {
+    color: #007bff;
+}
+
+/* Style pour les paragraphes */
+p {
+    line-height: 1.6;
+}
+
+/* Style pour les listes à puces et numérotées */
+ul, ol {
+    margin-left: 20px;
+}
+
+/* Style pour les éléments de liste */
+li {
+    margin-bottom: 5px;
+}
+
+/* Style pour les éléments iframe */
+iframe {
+    border: none;
+}
+
+/* Style pour le pied de page */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
