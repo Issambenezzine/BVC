@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'analyse de backtests</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="toggleNavButton">☰</button>
 
+    <nav class="top-nav">
+        <img src="https://idatech.ma/wp-content/uploads/2021/04/Logo-Source-file-300x94-white.png" alt="Logo" class="logo">
+        <ul>
+            <li><a href="https://idatech.ma/">Accueil</a></li>
+            <li><a href="#">Contacter Nous</a></li>
+            <li><a href="#">Réseau Social</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#explication">Explication</a></li>
+            <li><a href="#titre_IAM">Analyse du titre IAM</a></li>
+            <li><a href="#titre_AOULA">Analyse du titre ALAOULA</a></li>
+            <li><a href="#analyse_GAZ">Analyse du titre GAZ</a></li>
+            <li><a href="#analyse_BCP">Analyse du titre BCP</a></li>
+            <li><a href="#analyse_M2M">Analyse du titre M2M</a></li>
+        </ul>
+    </nav>
+    
+    
+<header>
+    <div class="header-background"></div> <!-- Cette div contiendra l'image de fond -->
+    <h1>Rapport d'analyse du backtest de stratégie pour les titres de la Bourse des Valeurs du Maroc</h1>
+</header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Ce rapport présente une analyse détaillée des résultats obtenus à partir de plusieurs stratégies de backtest appliquées à divers titres de la Bourse des Valeurs du Maroc. Les stratégies de backtest incluent Boulinger, Ichimoku, MACD, MomADX, ROC, ROCADX, RSI, SMA et Stochastique, implémentées à l'aide de la bibliothèque Python backtrader.</p>
+        <p>Les résultats des backtests ont été collectés sous forme de différentes métriques, parmi lesquelles les plus pertinentes pour la sélection des stratégies les plus rentables ou stables pour chaque titre sont énumérées ci-dessous :</p>
+        <ul>
+            <li>Pic d'équité</li>
+            <li>Ratio de rentabilité</li>
+            <li>Ratio de gain / perte</li>
+            <li>Ratio de Sharpe</li>
+            <li>Ratio moyen de gain par risque</li>
+            <li>Drawdown</li>
+            <li>...</li>
+        </ul>
+        <p>Ces métriques seront examinées en détail pour identifier les stratégies les plus performantes pour chaque titre. Des graphiques interactifs ont également été générés à l'aide de la bibliothèque Plotly pour visualiser les performances des différentes stratégies sur chaque titre.</p>
+    </section>
+    
+    <section id="explication">
+        <h2>Manipulation des graphiques interactifs avec Plotly :</h2>
+        <p>Lorsque vous visualisez un graphique interactif généré avec Plotly, vous pouvez effectuer plusieurs actions pour explorer les données plus en détail :</p>
+        <ol>
+            <li><strong>Affichage des métriques :</strong> Chaque barre dans le graphique représente une métrique spécifique. En cliquant sur une barre, vous pouvez afficher ou masquer la métrique correspondante. Par exemple, si vous cliquez deux fois sur une métrique, cela affichera uniquement cette métrique sur le graphique, vous permettant de comparer facilement ses valeurs entre les différentes stratégies.</li>
+            <li><strong>Exploration des périodes :</strong> Utilisez les options de zoom et de panoramique pour explorer différentes périodes du backtest. Vous pouvez zoomer sur une période spécifique en sélectionnant une zone sur le graphique ou en utilisant les boutons de zoom. De même, vous pouvez faire glisser le graphique pour voir différentes parties des résultats.</li>
+            <li><strong>Affichage des détails :</strong> En survolant une barre du graphique avec votre souris, vous pouvez afficher des détails supplémentaires sur cette métrique spécifique. Ces détails peuvent inclure le nom de la stratégie, la valeur de la métrique et d'autres informations pertinentes.</li>
+            <li><strong>Personnalisation :</strong> Utilisez les options de personnalisation fournies par Plotly pour ajuster l'apparence du graphique selon vos préférences. Vous pouvez modifier les couleurs, les légendes, les étiquettes d'axe et d'autres paramètres pour améliorer la lisibilité du graphique.</li>
+        </ol>
+        <p>En utilisant ces fonctionnalités, vous pouvez analyser les résultats de votre backtest de manière interactive, identifier les tendances et les performances des différentes stratégies, et prendre des décisions éclairées pour vos investissements.</p>
+    </section>
+    
+    <section id="titre_IAM">
+        <h2>Analyse du titre IAM</h2>
+        <p>Maroc Telecom (Acronyme : IAM, Arabe : اتصالات المغرب) est la principale entreprise de télécommunications au Maroc. Employant actuellement environ 11 178 employés, c'est le plus grand réseau de télécommunications du pays avec 8 délégations régionales et 220 bureaux présents à travers le Maroc. La société est cotée à la fois à la Bourse de Casablanca et à Euronext Paris.</p>
+        
+        <h3>Graphique interactif :</h3>
+        <!-- Ajoutez le code pour le graphique interactif IAM ici -->
+        <iframe src="Graphes/IAM_graph.html" width="100%" height="600px"></iframe>
+        
+        <h3>Analyse :</h3>
+        <p>Performance des Stratégies :</p>
+        <ul>
+            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
+            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+        </ul>
+        
+        <p>Stabilité et Risque :</p>
+        <ul>
+            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
+            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
+        </ul>
+        
+        <p>Tendances et Schémas :</p>
+        <ul>
+            <li>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques tels que Ichimoku et ROCADX, qui ont montré des performances constantes sur toute la période de backtest.</li>
+        </ul>
+        
+        <p>Recommandations :</p>
+        <ol>
+            <li>
+                <p>Prioriser les Stratégies Gagnantes :</p>
+                <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            </li>
+            <li>
+                <p>Surveiller les Performances :</p>
+                <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+            </li>
+        </ol>        
+
+        <p>Conclusion :</p>
+        <p>En conclusion, les résultats de backtest pour le titre IAM mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+    </section>
+    
+    <section id="titre_AOULA">
+        <h2>Analyse du titre ALAOULA</h2>
+        <p>Al Aoula (الأولى) est une chaîne de télévision publique marocaine faisant partie de la Société nationale de radiodiffusion et de télévision (SNRT). Elle diffuse des programmes variés incluant des informations, des émissions culturelles, des séries, des films et bien plus encore.</p>
+        
+        <h3>Graphique interactif :</h3>
+        <!-- Ajoutez le code pour le graphique interactif ALAOULA ici -->
+        <iframe src="graphes/AOULA_graph.html" width="100%" height="600px"></iframe>
+
+        <h3>Analyse :</h3>
+        <p>Performance des Stratégies :</p>
+        <ul>
+            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
+            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+        </ul>
+        
+        <p>Stabilité et Risque :</p>
+        <ul>
+            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
+            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
+        </ul>
+        
+        <p>Tendances et Schémas :</p>
+        <ul>
+            <li>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques tels que Ichimoku et ROCADX, qui ont montré des performances constantes sur toute la période de backtest.</li>
+        </ul>
+        
+        <p>Recommandations :</p>
+        <ol>
+            <li>Prioriser les Stratégies Gagnantes :</li>
+            <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            
+            <li>Surveiller les Performances :</li>
+            <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+        </ol>
+        
+        <p>Conclusion :</p>
+        <p>En conclusion, les résultats de backtest pour le titre AOULA mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+
+    </section>
+    
+    <section id="analyse_GAZ">
+        <h2>Analyse du titre GAZ</h2>
+        <p>Afriquia Gaz est une entreprise marocaine spécialisée dans le gaz de pétrole liquéfié (GPL), cotée en bourse depuis 1999. C'est la filiale gazière de Afriquia, elle-même une filiale de Akwa Group. Son siège se trouve à Casablanca.</p>
+        
+        <h3>Graphique interactif :</h3>
+        
+        <iframe src="graphes/GAZ_graph.html" width="100%" height="600px"></iframe>
+        
+        <h3>Performance des Stratégies :</h3>
+        <p>Les stratégies qui ont généré les meilleurs rendements sont Boulinger et MomADX, avec des pics d'équité significatifs. Elles ont affiché des ratios de rentabilité élevés et des gains nets importants.</p>
+        
+        <h3>Stabilité et Risque :</h3>
+        <p>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré. Les stratégies MACD et RSI ont également montré des performances relativement stables mais avec des rendements plus modestes.</p>
+        
+        <h3>Tendances et Schémas :</h3>
+        <p>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques telles que Boulinger et MomADX, qui ont généré des gains constants sur toute la période de backtest.</p>
+        
+        <h3>Recommandations :</h3>
+        <ol>
+            <li>Prioriser les Stratégies Performantes :</li>
+            <p>Je recommande de prioriser les stratégies Boulinger et MomADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            
+            <li>Surveiller les Performances :</li>
+            <p>Les performances des stratégies SMA et MACD méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+        </ol>
+        
+        <h3>Conclusion :</h3>
+        <p>En conclusion, les résultats de backtest pour le titre "GAZ" mettent en évidence plusieurs stratégies prometteuses, notamment Boulinger et MomADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+    </section>
+
+    <section id="analyse_BCP">
+        <h2>Analyse du titre BCP</h2>
+        <p>La Banque centrale populaire (BCP), société anonyme à conseil d'administration dont le siège social se trouve à Casablanca, est un établissement de crédit et l'organisme central bancaire des Banques populaires régionales (BPR), qui sont des coopératives à capital variable. </p>
+        <h3>Graphique interactif :</h3>
+        
+        <iframe src="graphes/BCP_graph.html" width="100%" height="600px"></iframe>
+        
+        <h3>Performance des Stratégies :</h3>
+        <p>Les stratégies qui ont généré les meilleurs rendements sont Boulinger et MomADX, avec des pics d'équité significatifs. Elles ont affiché des ratios de rentabilité élevés et des gains nets importants.</p>
+            
+        <h3>Stabilité et Risque :</h3>
+        <p>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré. Les stratégies Boulinger et MACD ont également montré des performances relativement stables mais avec des rendements plus modestes.</p>
+        
+        <h3>Tendances et Schémas :</h3>
+        <p>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques telles que Ichimoku et MomADX, qui ont généré des gains constants sur toute la période de backtest.</p>
+        
+        <h3>Recommandations :</h3>
+        <ol>
+            <li>Prioriser les Stratégies Performantes :</li>
+            <p>Je recommande de prioriser les stratégies Ichimoku et MomADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            
+            <li>Surveiller les Performances :</li>
+            <p>Les performances des stratégies SMA et Boulinger méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+        </ol>
+        
+        <h3>Conclusion :</h3>
+        <p>En conclusion, les résultats de backtest pour le titre "BCP" mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et MomADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+    
+    </section>
+    
+    <section id="analyse_M2M">
+        <h2>Analyse du titre M2M</h2>
+        <p>M2M Group ou M2M est une entreprise marocaine spécialisée dans les systèmes électroniques de paiement, de documents d'identité et de titres de transport magnétiques.
+
+            M2M Group est créée en 2002 et introduite en bourse en 2007.
+            
+            Elle est majoritairement détenue par RMK SA, une société qui regroupe ses fondateurs Redouan Bayed, Mounir Essayegh et Abdelkrim Matrouf.</p>
+        
+        <h3>Graphique interactif :</h3>
+        <!-- Ajoutez le code pour le graphique interactif IAM ici -->
+        <iframe src="graphes/M2M_graph.html" width="100%" height="600px"></iframe>
+        
+        <h3>Analyse :</h3>
+        <p>Performance des Stratégies :</p>
+        <ul>
+            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
+            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+        </ul>
+        
+        <p>Stabilité et Risque :</p>
+        <ul>
+            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
+            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
+        </ul>
+        
+        <p>Tendances et Schémas :</p>
+        <ul>
+            <li>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques tels que Ichimoku et ROCADX, qui ont montré des performances constantes sur toute la période de backtest.</li>
+        </ul>
+        
+        <p>Recommandations :</p>
+        <ol>
+            <li>
+                <p>Prioriser les Stratégies Gagnantes :</p>
+                <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            </li>
+            <li>
+                <p>Surveiller les Performances :</p>
+                <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+            </li>
+        </ol>        
+    
+        <p>Conclusion :</p>
+        <p>En conclusion, les résultats de backtest pour le titre IAM mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+    </section>
+    
+
+    <footer>
+        <p>Rapport créé par BENEZZINE ISSAM | Date : 08/04/2024</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sideNav = document.getElementById('sideNav');
+            var toggleButton = document.getElementById('toggleNavButton');
+    
+            toggleButton.addEventListener('click', function() {
+                sideNav.classList.toggle('show');
+            });
+        });
+    </script>
+    
+</body>
+</html>
