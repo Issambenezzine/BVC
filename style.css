@@ -120,7 +120,7 @@ header {
 
 header h1 {
     font-size: 32px;
-    margin-top: 160px;
+    margin-top: 0px;
     font-family: "Bebas Neue", sans-serif  /* Augmentez cette valeur pour déplacer le titre plus bas */
 }
 
