@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapport d'analyse de backtests</title>
+    <!-- Ajout de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +14,30 @@
 <body>
     <button id="toggleNavButton">☰</button>
 
-    <nav class="top-nav">
-        <img src="https://idatech.ma/wp-content/uploads/2021/04/Logo-Source-file-300x94-white.png" alt="Logo" class="logo">
-        <ul>
-            <li><a href="https://idatech.ma/">Accueil</a></li>
-            <li><a href="#">Contacter Nous</a></li>
-            <li><a href="#">Réseau Social</a></li>
-        </ul>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://idatech.ma/wp-content/uploads/2021/04/Logo-Source-file-300x94-white.png" alt="Logo" width="100" height="30" class="d-inline-block align-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://idatech.ma/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacter Nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Réseau Social</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
     
     <nav class="side-nav" id="sideNav">
         <ul>
@@ -30,6 +48,7 @@
             <li><a href="#analyse_GAZ">Analyse du titre GAZ</a></li>
             <li><a href="#analyse_BCP">Analyse du titre BCP</a></li>
             <li><a href="#analyse_M2M">Analyse du titre M2M</a></li>
+            <li><a href="#choix_graphe">Autres resultats de backtest</a></li>
         </ul>
     </nav>
     
@@ -73,40 +92,40 @@
         
         <h3>Graphique interactif :</h3>
         <!-- Ajoutez le code pour le graphique interactif IAM ici -->
-        <iframe src="graphes/IAM_graph.html" width="100%" height="600px"></iframe>
+        <iframe src="Graphes/IAM_graph.html" width="100%" height="600px"></iframe>
         
         <h3>Analyse :</h3>
         <p>Performance des Stratégies :</p>
         <ul>
-            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
-            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+            <li>Les stratégies Ichimoku et ROCADX se distinguent par leurs rendements élevés et leurs pics d'équité significatifs. Par exemple, Ichimoku a atteint un pic d'équité de 13923571, illustrant sa performance remarquable.</li>
+            <li>D'autres stratégies telles que SMA et Stockastique affichent également des rendements positifs. Par exemple, SMA a un total de pic d'équité de 1470533, démontrant sa capacité à générer des gains.</li>
         </ul>
         
         <p>Stabilité et Risque :</p>
         <ul>
-            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
-            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
+            <li>La stratégie SMA se démarque par son ratio équilibré entre les gains et les pertes, s'illustrant par un ratio de gain/de perte de 0,1929. Cette stabilité relative est un indicateur positif de sa robustesse.</li>
+            <li>D'autres stratégies telles que Boulinger, MACD et SMA ont également montré une certaine stabilité. Par exemple, MACD a un ratio de gain/de perte de -0,49155, indiquant une relative équilibre entre les gains et les pertes.</li>
         </ul>
         
         <p>Tendances et Schémas :</p>
         <ul>
-            <li>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques tels que Ichimoku et ROCADX, qui ont montré des performances constantes sur toute la période de backtest.</li>
+            <li>Les stratégies basées sur des indicateurs techniques tels qu'Ichimoku et ROC semblent suivre des schémas de tendance clairs. Par exemple, ROC a un gain en pourcentage de 0,458272, soulignant sa capacité à capturer les tendances.</li>
         </ul>
         
         <p>Recommandations :</p>
         <ol>
             <li>
                 <p>Prioriser les Stratégies Gagnantes :</p>
-                <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+                <p>Les stratégies Ichimoku et ROC devraient être priorisées en raison de leurs performances exceptionnelles et de leur stabilité. Par exemple, ROCADX a un ratio de gain/de perte de -3,36 , ce qui suggère une efficacité dans la gestion des risques.</p>
             </li>
             <li>
                 <p>Surveiller les Performances :</p>
-                <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+                <p>Bien que les stratégies SMA et Stockastique aient affiché des performances positives, il est recommandé de surveiller de près leur évolution pour confirmer leur stabilité à long terme. Par exemple, Stockastique a un ratio de gain/de perte de -0,38064, indiquant un potentiel d'amélioration.</p>
             </li>
         </ol>        
 
         <p>Conclusion :</p>
-        <p>En conclusion, les résultats de backtest pour le titre IAM mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+        <p>En conclusion, les résultats des stratégies fournissent des informations précieuses pour la prise de décision en matière d'investissement. En utilisant une approche diversifiée et en restant attentif aux performances et aux conditions du marché, il est possible d'optimiser les rendements tout en minimisant les risques associés aux investissements dans le titre IAM.</p>
     </section>
     
     <section id="titre_AOULA">
@@ -120,32 +139,25 @@
         <h3>Analyse :</h3>
         <p>Performance des Stratégies :</p>
         <ul>
-            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
-            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+            <li>La stratégie Boulinger a généré le pic d'équité le plus élevé, avec un total de pic d'équité de 1112907,848, suivie de près par MACD avec 1191242,557. Ces deux stratégies se distinguent par leurs performances robustes.</li>
+            <li>Ichimoku et ROCADX affichent également des rendements respectables, bien qu'ils soient légèrement inférieurs à ceux de Boulinger et MACD.</li>
         </ul>
         
         <p>Stabilité et Risque :</p>
         <ul>
-            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
-            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
-        </ul>
-        
-        <p>Tendances et Schémas :</p>
-        <ul>
-            <li>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques tels que Ichimoku et ROCADX, qui ont montré des performances constantes sur toute la période de backtest.</li>
+            <li>Le ratio de rentabilité pour les stratégies varie, avec des valeurs positives pour la plupart. Cependant, il est important de noter que toutes les stratégies présentent un ratio de gain/perte négatif, ce qui indique une tendance à avoir plus de pertes que de gains.</li>
+            <li>La stratégie Boulinger semble avoir un ratio de rentabilité relativement bas par rapport aux autres, ce qui peut indiquer un risque plus élevé associé à cette stratégie.</li>
         </ul>
         
         <p>Recommandations :</p>
         <ol>
-            <li>Prioriser les Stratégies Gagnantes :</li>
-            <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
             
             <li>Surveiller les Performances :</li>
-            <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+            <p>Les stratégies Ichimoku et ROCADX, bien qu'ayant des performances légèrement inférieures, peuvent toujours être considérées comme des options viables, surtout si elles présentent un risque plus faible que Boulinger et MACD.</p>
         </ol>
         
         <p>Conclusion :</p>
-        <p>En conclusion, les résultats de backtest pour le titre AOULA mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+        <p>En conclusion, les résultats du backtest révèlent plusieurs stratégies prometteuses, en particulier Boulinger et MACD. Cependant, il est important de prendre en compte le niveau de risque associé à ces stratégies lors de la prise de décision d'investissement.</p>
 
     </section>
     
@@ -158,25 +170,25 @@
         <iframe src="graphes/GAZ_graph.html" width="100%" height="600px"></iframe>
         
         <h3>Performance des Stratégies :</h3>
-        <p>Les stratégies qui ont généré les meilleurs rendements sont Boulinger et MomADX, avec des pics d'équité significatifs. Elles ont affiché des ratios de rentabilité élevés et des gains nets importants.</p>
+        <p>La stratégie "MACD" affiche le pic d'équité le plus élevé avec une valeur de 1522542,1605 , suivie de près par la stratégie "ROC" avec 1483765,71124. En termes de ratio de rentabilité, la stratégie "Bouligner" se démarque avec une valeur de 1,843577696, suivie de près par la stratégie "ROC" avec 0,794604097. </p>
         
         <h3>Stabilité et Risque :</h3>
-        <p>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré. Les stratégies MACD et RSI ont également montré des performances relativement stables mais avec des rendements plus modestes.</p>
+        <p>En termes de ratio de Sharpe, qui mesure le rendement ajusté en fonction du risque, la stratégie "Bouligner" et la stratégie "Ichimoku" présentent les valeurs les plus élevées, suggérant qu'elles pourraient offrir un meilleur rendement par unité de risque.</p>
         
         <h3>Tendances et Schémas :</h3>
-        <p>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques telles que Boulinger et MomADX, qui ont généré des gains constants sur toute la période de backtest.</p>
+        <p>Le Drawdown, qui mesure la perte maximale d'un portefeuille, est le plus bas pour la stratégie "MACD", ce qui suggère une meilleure résilience en cas de baisse du marché.</p>
         
         <h3>Recommandations :</h3>
         <ol>
             <li>Prioriser les Stratégies Performantes :</li>
-            <p>Je recommande de prioriser les stratégies Boulinger et MomADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            <p>Les stratégies "Bouligner" et "Ichimoku" semblent être les plus performantes en termes de rendement et de stabilité. Il serait judicieux de les surveiller de près pour d'éventuelles opportunités d'investissement.</p>
             
             <li>Surveiller les Performances :</li>
-            <p>Les performances des stratégies SMA et MACD méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+            <p>Bien que certaines stratégies affichent des rendements inférieurs, elles peuvent encore être utiles dans le cadre d'une stratégie de diversification pour réduire le risque global du portefeuille.</p>
         </ol>
         
         <h3>Conclusion :</h3>
-        <p>En conclusion, les résultats de backtest pour le titre "GAZ" mettent en évidence plusieurs stratégies prometteuses, notamment Boulinger et MomADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+        <p>L'analyse des performances des différentes stratégies de trading pour le titre étudié révèle des résultats variés. "Ichimoku" et "Bouligner" ont montré des pics d'équité les plus élevés, indiquant un fort potentiel de rendement. Cependant, aucune stratégie n'a surpassé le buy and hold en termes de rendement global.</p>
     </section>
 
     <section id="analyse_BCP">
@@ -187,21 +199,21 @@
         <iframe src="graphes/BCP_graph.html" width="100%" height="600px"></iframe>
         
         <h3>Performance des Stratégies :</h3>
-        <p>Les stratégies qui ont généré les meilleurs rendements sont Boulinger et MomADX, avec des pics d'équité significatifs. Elles ont affiché des ratios de rentabilité élevés et des gains nets importants.</p>
+        <p>La stratégie "SMA" maintient son statut de la stratégie avec le pic d'équité le plus élevé, avec une valeur de 1292890,442, suivie de près par "MACD" avec 1191242,557. Ces deux stratégies continuent d'être parmi les plus performantes en termes de rendement.Les autres stratégies telles que  "ROC", "RSI" et "Bouligner" présentent également des rendements respectables, bien qu'ils soient légèrement inférieurs à ceux des deux premières. </p>
             
         <h3>Stabilité et Risque :</h3>
-        <p>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré. Les stratégies Boulinger et MACD ont également montré des performances relativement stables mais avec des rendements plus modestes.</p>
+        <p>En examinant le ratio de rentabilité, plusieurs stratégies affichent des valeurs positives, indiquant un potentiel de gain. Cependant, toutes les stratégies ont un ratio de gain/perte négatif, suggérant une tendance à avoir plus de pertes que de gains.La stratégie "SMA" continue de se démarquer avec un ratio de rentabilité relativement élevé, suggérant une meilleure capacité à générer des gains par rapport aux autres stratégies.</p>
         
         <h3>Tendances et Schémas :</h3>
-        <p>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques telles que Ichimoku et MomADX, qui ont généré des gains constants sur toute la période de backtest.</p>
+        <p>Il semble y avoir une tendance vers les stratégies basées sur des indicateurs techniques telles que ROCADX et MomADX, qui ont généré des gains constants sur toute la période de backtest.</p>
         
         <h3>Recommandations :</h3>
         <ol>
             <li>Prioriser les Stratégies Performantes :</li>
-            <p>Je recommande de prioriser les stratégies Ichimoku et MomADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+            <p>La stratégie "SMA" reste une option prometteuse en raison de son pic d'équité élevé. Cependant, une analyse plus approfondie est nécessaire pour évaluer son niveau de risque.</p>
             
             <li>Surveiller les Performances :</li>
-            <p>Les performances des stratégies SMA et Boulinger méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+            <p>Les stratégies "Ichimoku", "MACD", "ROC" et "RSI" continuent également d'être dignes d'intérêt en raison de leurs performances respectables. Il est recommandé de surveiller leur stabilité et leur capacité à générer des gains à long terme.</p>
         </ol>
         
         <h3>Conclusion :</h3>
@@ -224,14 +236,14 @@
         <h3>Analyse :</h3>
         <p>Performance des Stratégies :</p>
         <ul>
-            <li>Les stratégies qui ont généré les meilleurs rendements sont Ichimoku et ROCADX, avec des pics d'équité significatifs.</li>
-            <li>Les stratégies SMA et Stockastique ont également montré des performances prometteuses, bien qu'elles aient légèrement moins performé que les deux premières.</li>
+            <li>La stratégie "MACD" affiche  un pic d'équité élevé, avec une valeur de 1522542,161, ce qui la place en tête en termes de rendement.</li>
+            <li>Les stratégies "ROC" et "SMA" suivent de près, avec des pics d'équité respectifs de 14838765,711 et 1470573,062.</li>
         </ul>
         
         <p>Stabilité et Risque :</p>
         <ul>
-            <li>La stratégie SMA semble offrir une bonne stabilité avec un ratio de gain/perte équilibré.</li>
-            <li>Les stratégies Boulinger, MACD et RSI ont montré des performances relativement stables mais avec des rendements plus modestes.</li>
+            <li>En termes de ratio de rentabilité, la stratégie "MOMADX" se démarque avec une valeur de 2,094189688, ce qui suggère une meilleure capacité à générer des gains par rapport aux autres stratégies.</li>
+            <li>Les stratégies "SMA", "RSI" et "MACD" présentent également des ratios de rentabilité positifs, indiquant un potentiel de gain.</li>
         </ul>
         
         <p>Tendances et Schémas :</p>
@@ -243,22 +255,118 @@
         <ol>
             <li>
                 <p>Prioriser les Stratégies Gagnantes :</p>
-                <p>Je recommande de prioriser les stratégies Ichimoku et ROCADX, qui ont généré les meilleurs rendements et ont montré une stabilité remarquable sur la période de backtest.</p>
+                <p>La stratégie "Ichimoku" continue d'être une option prometteuse en raison de son pic d'équité élevé. Il serait judicieux de surveiller sa stabilité et sa performance à long terme.</p>
             </li>
             <li>
                 <p>Surveiller les Performances :</p>
-                <p>Bien que les stratégies SMA et Stockastique n'aient pas affiché les rendements les plus élevés, elles méritent d'être surveillées de près en raison de leur stabilité et de leur potentiel de croissance.</p>
+                <p>La stratégie "SMA" mérite également d'être prise en considération en raison de son ratio de rentabilité positif. Il est recommandé de poursuivre l'analyse pour évaluer son niveau de risque.</p>
             </li>
         </ol>        
     
         <p>Conclusion :</p>
-        <p>En conclusion, les résultats de backtest pour le titre IAM mettent en évidence plusieurs stratégies prometteuses, notamment Ichimoku et ROCADX. En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+        <p>En conclusion, les résultats de backtest pour le titre M2M mettent en évidence plusieurs stratégies prometteuses, notamment MOMADX et MACD . En utilisant une approche de diversification et en continuant à surveiller les performances, il est possible de maximiser les rendements tout en minimisant les risques.</p>
+    </section>
+
+    <section id="choix_graphe">
+        <h2>Autres resultats de backtests</h2>
+        <select id="liste_graphe">
+            <option value="AFM_graph.html">Graphe du titre AFM</option>
+<option value="AGMA_graph.html">Graphe du titre AGMA</option>
+<option value="AKT_graph.html">Graphe du titre AKT</option>
+<option value="ALM_graph.html">Graphe du titre ALM</option>
+<option value="AOULA_graph.html">Graphe du titre AOULA</option>
+<option value="ARD_graph.html">Graphe du titre ARD</option>
+<option value="ATH_graph.html">Graphe du titre ATH</option>
+<option value="ATL_graph.html">Graphe du titre ATL</option>
+<option value="ATW_graph.html">Graphe du titre ATW</option>
+<option value="BAL_graph.html">Graphe du titre BAL</option>
+<option value="BCI_graph.html">Graphe du titre BCI</option>
+<option value="BCP_graph.html">Graphe du titre BCP</option>
+<option value="BOA_graph.html">Graphe du titre BOA</option>
+<option value="CDM_graph.html">Graphe du titre CDM</option>
+<option value="CIH_graph.html">Graphe du titre CIH</option>
+<option value="CMA_graph.html">Graphe du titre CMA</option>
+<option value="CMT_graph.html">Graphe du titre CMT</option>
+<option value="COL_graph.html">Graphe du titre COL</option>
+<option value="CRS_graph.html">Graphe du titre CRS</option>
+<option value="CSR_graph.html">Graphe du titre CSR</option>
+<option value="CTM_graph.html">Graphe du titre CTM</option>
+<option value="DHO_graph.html">Graphe du titre DHO</option>
+<option value="DLM_graph.html">Graphe du titre DLM</option>
+<option value="DRI_graph.html">Graphe du titre DRI</option>
+<option value="DWY_graph.html">Graphe du titre DWY</option>
+<option value="DYT_graph.html">Graphe du titre DYT</option>
+<option value="EQD_graph.html">Graphe du titre EQD</option>
+<option value="FBR_graph.html">Graphe du titre FBR</option>
+<option value="GAZ_graph.html">Graphe du titre GAZ</option>
+<option value="HPS_graph.html">Graphe du titre HPS</option>
+<option value="IAM_graph.html">Graphe du titre IAM</option>
+<option value="IBC_graph.html">Graphe du titre IBC</option>
+<option value="IMO_graph.html">Graphe du titre IMO</option>
+<option value="INV_graph.html">Graphe du titre INV</option>
+<option value="JET_graph.html">Graphe du titre JET</option>
+<option value="LBV_graph.html">Graphe du titre LBV</option>
+<option value="LES_graph.html">Graphe du titre LES</option>
+<option value="LHM_graph.html">Graphe du titre LHM</option>
+<option value="M2M_graph.html">Graphe du titre M2M</option>
+<option value="MAB_graph.html">Graphe du titre MAB</option>
+<option value="MDP_graph.html">Graphe du titre MDP</option>
+<option value="MIC_graph.html">Graphe du titre MIC</option>
+<option value="MLE_graph.html">Graphe du titre MLE</option>
+<option value="MNG_graph.html">Graphe du titre MNG</option>
+<option value="MOX_graph.html">Graphe du titre MOX</option>
+<option value="MSA_graph.html">Graphe du titre MSA</option>
+<option value="MUT_graph.html">Graphe du titre MUT</option>
+<option value="NEJ_graph.html">Graphe du titre NEJ</option>
+<option value="NKL_graph.html">Graphe du titre NKL</option>
+<option value="PRO_graph.html">Graphe du titre PRO</option>
+<option value="RDS_graph.html">Graphe du titre RDS</option>
+<option value="REB_graph.html">Graphe du titre REB</option>
+<option value="RIS_graph.html">Graphe du titre RIS</option>
+<option value="S2M_graph.html">Graphe du titre S2M</option>
+<option value="SAH_graph.html">Graphe du titre SAH</option>
+<option value="SBM_graph.html">Graphe du titre SBM</option>
+<option value="SID_graph.html">Graphe du titre SID</option>
+<option value="SLF_graph.html">Graphe du titre SLF</option>
+<option value="SMI_graph.html">Graphe du titre SMI</option>
+<option value="SNA_graph.html">Graphe du titre SNA</option>
+<option value="SNP_graph.html">Graphe du titre SNP</option>
+<option value="SOT_graph.html">Graphe du titre SOT</option>
+<option value="SRM_graph.html">Graphe du titre SRM</option>
+<option value="STR_graph.html">Graphe du titre STR</option>
+<option value="TGC_graph.html">Graphe du titre TGC</option>
+<option value="TIM_graph.html">Graphe du titre TIM</option>
+<option value="TMA_graph.html">Graphe du titre TMA</option>
+<option value="TQM_graph.html">Graphe du titre TQM</option>
+<option value="UMR_graph.html">Graphe du titre UMR</option>
+<option value="WAA_graph.html">Graphe du titre WAA</option>
+<option value="ZDJ_graph.html">Graphe du titre ZDJ</option>
+
+        </select>
+        <div id="graphique"></div>
     </section>
     
-
+    <script>
+        document.getElementById("liste_graphe").addEventListener("change", function() {
+            var nomGraphe = this.value; // Récupère le nom du graphe sélectionné dans la liste
+            
+            if (nomGraphe !== "") {
+                var iframe = document.createElement('iframe');
+                iframe.src = "graphes/" + nomGraphe; // Mettez le chemin correct vers votre dossier de graphiques
+                iframe.width = "100%";
+                iframe.height = "600px";
+                document.getElementById("graphique").innerHTML = ''; // Efface le contenu précédent du div graphique
+                document.getElementById("graphique").appendChild(iframe);
+            } else {
+                document.getElementById("graphique").innerHTML = ''; // Efface le contenu du div graphique s'il n'y a aucun graphe sélectionné
+            }
+        });
+    </script>
+    
     <footer>
         <p>Rapport créé par BENEZZINE ISSAM | Date : 08/04/2024</p>
     </footer>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var sideNav = document.getElementById('sideNav');
@@ -269,6 +377,8 @@
             });
         });
     </script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
